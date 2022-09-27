@@ -1,5 +1,3 @@
-
-import './style.css';
 import * as THREE from 'https://unpkg.com/three@0.126.1/build/three.module.js';
 import { Water } from 'https://unpkg.com/three@0.126.1/examples/jsm/objects/Water.js'
 import { Sky } from 'https://unpkg.com/three@0.126.1/examples/jsm/objects/Sky.js'
