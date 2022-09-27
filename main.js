@@ -1,8 +1,8 @@
 import './style.css';
-import * as THREE from 'three';
-import { Water } from 'three/examples/jsm/objects/Water.js'
-import { Sky } from 'three/examples/jsm/objects/Sky.js'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+import * as THREE from './node_modules/three/build/three.module.js';
+import { Water } from './node_modules/three/examples/jsm/objects/Water.js'
+import { Sky } from './node_modules/three/examples/jsm/objects/Sky.js'
+import { GLTFLoader } from './node_modules/three/examples/jsm/loaders/GLTFLoader.js'
 
 // Setup
 
