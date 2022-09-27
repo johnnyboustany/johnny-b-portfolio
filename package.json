@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@types/dat.gui": "^0.7.7",
@@ -12,6 +13,7 @@
     "vite": "^2.3.0"
   },
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "lil-gui": "^0.17.0",
     "stats.js": "^0.17.0",
     "three": "^0.128.0"
