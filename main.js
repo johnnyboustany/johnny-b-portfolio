@@ -1,7 +1,7 @@
-import * as THREE from 'three';
-import { Water } from 'three/examples/jsm/objects/Water.js'
-import { Sky } from 'three/examples/jsm/objects/Sky.js'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+import * as THREE from 'https://unpkg.com/three@0.126.1/build/three.module.js';
+import { Water } from 'https://unpkg.com/three@0.126.1/examples/jsm/objects/Water.js'
+import { Sky } from 'https://unpkg.com/three@0.126.1/examples/jsm/objects/Sky.js'
+import { GLTFLoader } from 'https://unpkg.com/three@0.126.1/examples/jsm/loaders/GLTFLoader.js'
 
 // Setup
 
@@ -339,8 +339,7 @@ window.addEventListener('resize',function(){
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
-/*
-    const canvas = renderer.domElement;
+/*    const canvas = renderer.domElement;
     camera.aspect = canvas.clientWidth / canvas.clientHeight;
   camera.updateProjectionMatrix();
   renderer.setSize(canvas.clientWidth, canvas.clientHeight);*/
