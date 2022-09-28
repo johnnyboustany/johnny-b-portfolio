@@ -1,7 +1,7 @@
-import * as THREE from 'https://unpkg.com/three@0.126.1/build/three.module.js';
-import { Sky } from 'https://unpkg.com/three@0.126.1/examples/jsm/objects/Sky.js';
-import { Water } from 'https://unpkg.com/three@0.126.1/examples/jsm/objects/Water.js';
-import { GLTFLoader } from 'https://unpkg.com/three@0.126.1/examples/jsm/loaders/GLTFLoader.js';
+import * as THREE from 'https://unpkg.com/three@0.127/build/three.module.js';
+import { Sky } from 'https://unpkg.com/three@0.127/examples/jsm/objects/Sky.js';
+import { Water } from 'https://unpkg.com/three@0.127/examples/jsm/objects/Water.js';
+import { GLTFLoader } from 'https://unpkg.com/three@0.127/examples/jsm/loaders/GLTFLoader.js';
 
 // Setup
 
