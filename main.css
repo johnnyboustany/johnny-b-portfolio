@@ -41,7 +41,7 @@ body { padding-top:  0.2777777777777778vw; }
 
 /* Navbar links */
 #navbar a {
-  font-size: 1.3vw;
+  font-size: 1.2vw;
   float: left;
   display: block;
   text-align: center;
@@ -362,17 +362,18 @@ ul li {
 }
 
 .tooltip .tooltiptext {
+  font-size: 1vw;
   visibility: hidden;
-  width: 140px;
+  width: 10.41vw;
   background: var(--dark-bg);
   text-align: center;
-  border-radius: 6px;
-  padding: 5px;
+  border-radius: 0.6607929515418502vw;
+  padding: 0.5506607929515418vw;
   position: absolute;
   z-index: -1;
-  bottom: 150%;
+  bottom: 160%;
   left: 50%;
-  margin-left: -75px;
+  margin-left: -5.7vw;
   opacity: 0;
   transition: opacity 0.3s;
   font-family: 'Metropolis-Thin';
@@ -383,8 +384,8 @@ ul li {
   position: absolute;
   top: 100%;
   left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
+  margin-left: -0.5506607929515418vw;
+  border-width: 0.5506607929515418vw;
   border-style: solid;
   border-color:  rgba(255, 255, 255, 0.88) transparent transparent transparent;
 }

@@ -346,8 +346,10 @@ const email = document.getElementById('email');
 email.addEventListener('click',()=>{
     var tooltip = document.getElementById("myTooltip");
 
+    copy("johnny_boustany@brown.edu");
     // Copy the text inside the text field
     navigator.clipboard.writeText("johnny_boustany@brown.edu");
+
 
     tooltip.innerHTML = "copied email.";
 });
@@ -357,4 +359,13 @@ email.addEventListener('mouseleave',()=>{
     var tooltip = document.getElementById("myTooltip");
     tooltip.innerHTML = "copy to clipboard.";
 });
+
+function copy(str) {
+    const el = document.createElement('textarea');
+    el.value = str;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+};
 
