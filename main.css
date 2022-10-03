@@ -33,6 +33,10 @@ html, body {
 
 body { padding-top:  0.2777777777777778vw; }
 
+@media screen and (max-width: 700px) {
+
+}
+
 
 /* Style the navbar */
 #navbar {
@@ -41,7 +45,7 @@ body { padding-top:  0.2777777777777778vw; }
 
 /* Navbar links */
 #navbar a {
-  font-size: 1.2vw;
+  font-size: 1.15vw;
   float: left;
   display: block;
   text-align: center;
@@ -223,7 +227,6 @@ body { padding-top:  0.2777777777777778vw; }
 
 }
 
-
 .close {
   font-size: 45px;
   font-weight: 600;
@@ -242,6 +245,8 @@ canvas {
   height: 100vh;
   display: inline;
   position: fixed;
+  top: 0;
+  left: 0;
 }
 
 :root {
@@ -252,7 +257,6 @@ canvas {
   font-family: 'Metropolis-Thin';
   font-weight: 400;
 }
-
 
 main {
   color: black;
@@ -265,6 +269,8 @@ main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
+
+
 
 a {
   color: black;
@@ -305,11 +311,6 @@ h2 {
 .description {
   font-size: 1.1805555555555556vw;
 }
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
 
 header {
   border-radius: 0.6944444444444444vw;
@@ -321,6 +322,8 @@ header {
   padding: 2.2vw;
   margin-bottom: var(--spacing);
 }
+
+
 
 section {
   border-radius: 0.6944444444444444vw;
@@ -349,11 +352,30 @@ grid-column: span 6 / 10
   grid-column: span 6 / 10;
 }
 .skills {
-grid-column: span 4 / 9;
+  grid-column: span 4 / 9;
+}
+@media screen and (max-width: 700px) {
+
+  section{
+    grid-column: span 7 / 9;
+
+  }
+  .center{
+    grid-column: span 8 / 10;
+  }
+  .skills{
+    grid-column: span 7 / 9;
+
+  }
+  .left{
+    grid-column: span 7 / 9;
+
+  }
 }
 
+
 p{
-  font-size: 1.5vw ;
+  font-size: 1.35vw ;
 
 }
 
