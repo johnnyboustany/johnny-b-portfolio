@@ -334,6 +334,7 @@ section {
 grid-column: span 6 / 10
 }
 .center {
+  z-index: -1;
   background: var(--dark-bg);
   border-radius: 10px;
   border: rgba(255, 255, 255, 0.93);
@@ -356,8 +357,8 @@ ul li {
 }
 
 .tooltip {
-  position: relative;
   display: inline-block;
+  position: relative;
 }
 
 .tooltip .tooltiptext {
@@ -368,7 +369,7 @@ ul li {
   border-radius: 6px;
   padding: 5px;
   position: absolute;
-  z-index: 1;
+  z-index: -1;
   bottom: 150%;
   left: 50%;
   margin-left: -75px;

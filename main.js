@@ -342,18 +342,19 @@ window.addEventListener('resize',function(){
 });
 
 const email = document.getElementById('email');
-var tooltip = document.getElementById("myTooltip");
 
 email.addEventListener('click',()=>{
+    var tooltip = document.getElementById("myTooltip");
 
-        // Copy the text inside the text field
-        navigator.clipboard.writeText("johnny_boustany@brown.edu");
+    // Copy the text inside the text field
+    navigator.clipboard.writeText("johnny_boustany@brown.edu");
 
-        tooltip.innerHTML = "copied email.";
+    tooltip.innerHTML = "copied email.";
 });
 
-email.addEventListener("mouseleave",()=>{
+email.addEventListener('mouseleave',()=>{
 
+    var tooltip = document.getElementById("myTooltip");
     tooltip.innerHTML = "copy to clipboard.";
 });
 
