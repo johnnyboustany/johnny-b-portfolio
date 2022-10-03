@@ -226,8 +226,8 @@ body { padding-top:  0.2777777777777778vw; }
 
 .close {
   font-size: 45px;
-  color: white;
   font-weight: 600;
+  color: black;
 }
 
 .modal-container.show{
