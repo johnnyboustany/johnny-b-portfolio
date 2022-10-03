@@ -284,6 +284,13 @@ li {
   font-family: Metropolis-Thin !important;
   font-size: 0.9722222222222222vw;
 }
+li::marker {
+  color: black;
+  font-size: 0.8vw;
+}
+
+
+
 .role-desc{
   font-family: 'Metropolis-Regular', serif !important;
   font-size: 1.4vw;
