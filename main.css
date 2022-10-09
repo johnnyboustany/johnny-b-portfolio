@@ -353,6 +353,17 @@ ul li {
   padding-right: 4em;
 }
 
+li {
+  list-style: none;
+}
+
+li:before {
+  content:"· ";
+  font-size:1.6666666666666667vw;
+  vertical-align:middle;
+  line-height:1.3888888888888888vw;
+}
+
 .tooltip {
   display: inline-block;
   position: relative;

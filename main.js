@@ -276,9 +276,9 @@ function isMobile(){
     return window.innerWidth <= 1000;
 }
 
-
+if(!isMobile()){
 window.addEventListener("scroll", stickyFunction);
-
+    }
 
 // modal popup for projects
 const openBtns = document.querySelectorAll('.open');
@@ -317,19 +317,6 @@ const home = document.getElementById('home-a');
 
 });
 
-const aboutme = document.getElementById('aboutme-a');
-aboutme.addEventListener('click',()=>{
-    window.focus();
-    window.scrollTo(0, window.innerHeight - 5*aboutme.clientHeight );
-});
-
-const projects = document.getElementById('projects-a');
-projects.addEventListener('click',()=>{
-
-    window.focus();
-    window.scrollTo(0, 2.2*(window.innerHeight - 5*projects.clientHeight) );
-
-});
 
 window.addEventListener('resize',function(){
 
