@@ -338,10 +338,10 @@ projects.addEventListener('click',()=>{
 
 window.addEventListener('resize',function(){
 
- //   camera.aspect = window.innerWidth / window.innerHeight;
-  //  camera.updateProjectionMatrix();
-   // renderer.setSize(window.innerWidth, window.innerHeight);
-    
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
     if(!isMobile()){
         johnny.position.z = -25;
         johnny.position.x = 15;
@@ -349,11 +349,7 @@ window.addEventListener('resize',function(){
         johnny.position.z = -60;
         johnny.position.x = 14;
     }
-    resizeCanvas();
-
-
-
-
+   // resizeCanvas();
 
 });
 
