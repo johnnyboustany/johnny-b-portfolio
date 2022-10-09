@@ -337,9 +337,7 @@ projects.addEventListener('click',()=>{
 });
 
 window.addEventListener('resize',function(){
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
+
 
     if(!isMobile()){
         johnny.position.z = -25;
@@ -348,7 +346,25 @@ window.addEventListener('resize',function(){
         johnny.position.z = -60;
         johnny.position.x = 14;
     }
+    resizeCanvas();
+
+   // camera.aspect = window.innerWidth / window.innerHeight;
+   // camera.updateProjectionMatrix();
+   // renderer.setSize(window.innerWidth, window.innerHeight);
+
+
+
+
 });
+
+function resizeCanvas() {
+    if (canvas.width !== canvas.clientWidth ||
+        canvas.height !== canvas.clientHeight) {
+        canvas.width = canvas.clientWidth;
+        canvas.height = canvas.clientHeight;
+        renderer.viewport(0, 0, canvas.width, canvas.height);
+    }
+}
 
 const email = document.getElementById('email');
 
@@ -356,10 +372,8 @@ email.addEventListener('click',()=>{
     var tooltip = document.getElementById("myTooltip");
 
     copy("johnny_boustany@brown.edu");
-    // Copy the text inside the text field
+
     navigator.clipboard.writeText("johnny_boustany@brown.edu");
-
-
     tooltip.innerHTML = "copied email.";
 });
 
