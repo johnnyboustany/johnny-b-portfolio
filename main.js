@@ -36,7 +36,6 @@ let water = new Water(
         textureWidth: 512,
         textureHeight: 512,
         waterNormals: new THREE.TextureLoader().load('./static/assets/waternormals.jpg', function ( texture ) {
-
             texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
 
         } ),
@@ -119,7 +118,6 @@ if(!isMobile()){
     johnny.position.x = 14;
 }
 
-
 johnny.rotation.x = 20;
 
 // Boat
@@ -132,14 +130,11 @@ gltfLoader.load('./static/assets/wooden_boat/scene.gltf', (gltfScene) => {
         gltfScene.scene.position.z = 20;
         gltfScene.scene.scale.set(0.1, 0.1,0.1, 0.1)
         gltfScene.scene.position.setX(-40);
-
     }
 });
 
 
 // Scroll Animation
-
-// let oldValue = 0; // for knowing when user scrolls up or down
 
 function moveCamera() {
     const home_span = document.getElementById("home-span");
@@ -349,18 +344,7 @@ window.addEventListener('resize',function(){
         johnny.position.z = -60;
         johnny.position.x = 14;
     }
-   // resizeCanvas();
-
 });
-
-function resizeCanvas() {
-    if (canvas.width !== canvas.clientWidth ||
-        canvas.height !== canvas.clientHeight) {
-        canvas.width = canvas.clientWidth;
-        canvas.height = canvas.clientHeight;
-        renderer.viewport(0, 0, canvas.width, canvas.height);
-    }
-}
 
 const email = document.getElementById('email');
 
