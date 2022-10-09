@@ -1,3 +1,8 @@
+.buttons{
+  display:flex;
+  justify-content: space-evenly;
+}
+
 button{
   font-family: 'Metropolis-Thin';
   display: inline-block;
