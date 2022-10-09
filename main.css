@@ -25,16 +25,10 @@ button:active {
   background-color: rgba(0,0,128, 0.40);
 }
 
-html, body {
-  max-width: 100%;
+body {
+  padding-top:  0.2777777777777778vw;
   overflow-x: hidden;
   scroll-behavior: smooth;
-}
-
-body { padding-top:  0.2777777777777778vw; }
-
-@media screen and (max-width: 700px) {
-
 }
 
 
@@ -51,14 +45,12 @@ body { padding-top:  0.2777777777777778vw; }
   text-align: center;
   padding: 0.5vw;
   text-decoration: none;
-
 }
 
 /* Navbar links */
 #navbar a:hover {
   font-family: 'Metropolis-SemiBold';
 }
-
 
 /* Navbar links */
 #navbar a:active {
@@ -70,10 +62,8 @@ body { padding-top:  0.2777777777777778vw; }
   padding: 16px;
 }
 
-
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
-
   position:fixed;
   left:0;
   top:0;
@@ -82,7 +72,6 @@ body { padding-top:  0.2777777777777778vw; }
   height:100%;
   padding-top: 40px;
   padding-left: 20px;
-
   color: white;
 }
 
@@ -90,13 +79,11 @@ body { padding-top:  0.2777777777777778vw; }
   opacity: 1;
   -webkit-transition: opacity 1000ms linear;
   transition: opacity 1000ms linear;
-
   display: flex;
   flex-direction: column;
   margin-bottom: 5px;
   color: white;
   text-shadow: 1px 1px 2px black;
-
 }
 
 .fade-in {
@@ -115,37 +102,9 @@ body { padding-top:  0.2777777777777778vw; }
   animation: fadeout 2s;
 }
 
-#about-me-span {
-
-}
-#projects-span{
-
-
-}
-
-#experience-span{
-
-
-}
-
-#skills-span{
-
-
-}
-
-#contact-span{
-
-
-}
-
-.home {
-
-
-}
 .bold {
   font-family: Metropolis-SemiBold;
 }
-
 
 @keyframes fadein {
   from { opacity: 0; }
@@ -209,22 +168,24 @@ body { padding-top:  0.2777777777777778vw; }
   padding-top: 60px;
 }
 
+
 .modal-container{
   background: #fff;
   visibility: hidden;
   opacity: 0;
   position: fixed;
   pointer-events: none;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
   right: 5%;
   width: 90%;
   top: 5%;
   bottom: 0%;
   left: 5%;
   height: 95%;
-  overflow: auto;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.15);
   border-radius: 15px 15px 0 0;
-
 }
 
 .close {
@@ -308,9 +269,7 @@ h2 {
 }
 
 
-.description {
-  font-size: 1.1805555555555556vw;
-}
+
 
 header {
   border-radius: 0.6944444444444444vw;
@@ -373,12 +332,10 @@ grid-column: span 6 / 10
   }
 }
 
-
 p{
   font-size: 1.35vw ;
 
 }
-
 
 ul li {
   right: 0.2vh;
@@ -422,4 +379,8 @@ ul li {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+
+.description {
+  font-size: 1.1805555555555556vw;
 }
