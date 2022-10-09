@@ -338,6 +338,10 @@ projects.addEventListener('click',()=>{
 
 window.addEventListener('resize',function(){
 
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
 
     if(!isMobile()){
         johnny.position.z = -25;
@@ -348,9 +352,6 @@ window.addEventListener('resize',function(){
     }
     resizeCanvas();
 
-   // camera.aspect = window.innerWidth / window.innerHeight;
-   // camera.updateProjectionMatrix();
-   // renderer.setSize(window.innerWidth, window.innerHeight);
 
 
 

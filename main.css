@@ -24,7 +24,11 @@ button:hover {
 button:active {
   background-color: rgba(0,0,128, 0.40);
 }
+html{
 
+  width: 100% !important;
+  height: 100% !important;
+}
 body {
   padding-top:  0.2777777777777778vw;
   overflow-x: hidden;
