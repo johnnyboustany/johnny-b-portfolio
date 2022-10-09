@@ -35,7 +35,7 @@ let water = new Water(
     {
         textureWidth: 512,
         textureHeight: 512,
-        waterNormals: new THREE.TextureLoader().load('waternormals.jpg', function ( texture ) {
+        waterNormals: new THREE.TextureLoader().load('./static/assets/waternormals.jpg', function ( texture ) {
 
             texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
 
@@ -105,7 +105,7 @@ scene.add(pointLight, ambientLight);
 
 
 // Johnny Cube
-const johnnyTexture = new THREE.TextureLoader().load('johnny.png');
+const johnnyTexture = new THREE.TextureLoader().load('./static/assets/johnny.png');
 
 const johnny = new THREE.Mesh(new THREE.BoxGeometry(10, 10, 10), new THREE.MeshBasicMaterial({ map: johnnyTexture }));
 
@@ -125,7 +125,7 @@ johnny.rotation.x = 20;
 // Boat
 let loadedBoat;
 const gltfLoader = new GLTFLoader();
-gltfLoader.load('./wooden_boat/scene.gltf', (gltfScene) => {
+gltfLoader.load('./static/assets/wooden_boat/scene.gltf', (gltfScene) => {
     loadedBoat = gltfScene;
     if(!isMobile()){
         scene.add(gltfScene.scene);

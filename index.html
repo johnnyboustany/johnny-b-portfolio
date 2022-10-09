@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="jb.png">
+    <link rel="shortcut icon" type="image/png" href="./static/assets/jb.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Johnny Boustany's Portfolio</title>
     <link rel="preload" href="fonts.css" as="style">
@@ -35,7 +35,7 @@
             <h2 style="font-family: 'Metropolis-Regular'">about me. 🐟 </h2>
             <p> I am a graduate student at Brown University studying Computer Science. I recently completed my bachelor's in Mechanical Engineering at Brown (Class of 2022).
               I was born and raised in Beirut, Lebanon, and am Lebanese, Swedish and American. </p>
-            <p>For a condensed summary of my skills & experiences, you can find my resumé <a style=" color: black" target="blank" href="resume.pdf">here</a>.</p>
+            <p>For a condensed summary of my skills & experiences, you can find my resumé <a style=" color: black" target="blank" href="./static/assets/resume.pdf">here</a>.</p>
           </div>
         </section>
 
@@ -61,12 +61,12 @@
         <div class='modal-container' id='modal1'>
           <div class="modal">
 
-            <div style="width: 100%; height: 36vw; background-image: url('typeically.png'); background-size: cover; position: relative;">
+            <div style="width: 100%; height: 36vw; background-image: url('./static/assets/typeically.png'); background-size: cover; position: relative;">
               <span class="close" data-modal="modal1" style="color: white; position: absolute; right: -0.7vw; top: -0.2vw; width: 3.125vw; height: 3.125vw; cursor:pointer; font-size:3vw;">&times;</span>
             </div>
 
             <div style="max-width: 100%; padding: 0 40px">
-              <p style="font-size: 2vw; font-family: 'Metropolis-SemiBold'; text-align: center; margin-bottom: 0.6944444444444444vw">Typeically <a href='https://github.com/johnnyboustany/Typeically'><img style="height:2vw; width: auto;"  class='footer-icon' src='github.svg'/></a>
+              <p style="font-size: 2vw; font-family: 'Metropolis-SemiBold'; text-align: center; margin-bottom: 0.6944444444444444vw">Typeically <a href='https://github.com/johnnyboustany/Typeically'><img style="height:2vw; width: auto;"  class='footer-icon' src='./static/assets/github.svg'/></a>
               </p>
 
               <p style="font-size: 1.7vw; font-family: 'Metropolis-Regular'; text-align: center; margin-top: 0; margin-bottom: 0.6944444444444444vw">Spring 2022 • <span style="font-size: 1.7vw; font-family: 'Metropolis-LightItalic'"> Stack: Java, JavaScript, React, SQL</span> </p>
@@ -112,12 +112,12 @@
         </div>
 
         <div class='modal-container' id='modal2'>
-            <div style="width: 100%; height: 36vw; background-image: url('nanofish.png'); background-size: cover; position: relative;">
+            <div style="width: 100%; height: 36vw; background-image: url('./static/assets/nanofish.png'); background-size: cover; position: relative;">
               <span class="close" data-modal="modal2" style="color: black; position: absolute; right: -0.7vw; top: -0.2vw; width: 3.125vw; height: 3.125vw; cursor:pointer; font-size:3vw;">&times;</span>
             </div>
 
             <div style="max-width: 100%; padding: 0 40px">
-              <p style="font-size: 2vw; font-family: 'Metropolis-SemiBold'; text-align: center; margin-bottom: 0.6944444444444444vw">NanoFish Matcher <a href='https://github.com/johnnyboustany/NanotankRecommender'><img style="height:2vw; width: auto;" class='footer-icon' src='github.svg'/></a> </p>
+              <p style="font-size: 2vw; font-family: 'Metropolis-SemiBold'; text-align: center; margin-bottom: 0.6944444444444444vw">NanoFish Matcher <a href='https://github.com/johnnyboustany/NanotankRecommender'><img style="height:2vw; width: auto;" class='footer-icon' src='./static/assets/github.svg'/></a> </p>
               <p style="font-size: 1.7vw; font-family: 'Metropolis-Regular'; text-align: center; margin-top: 0; margin-bottom:  0.6944444444444444vw">Fall 2022 • <span style="font-size: 1.7vw; font-family: 'Metropolis-LightItalic'"> Stack: Java</span></p>
               <p style="font-size: 1.3vw; font-family: 'Metropolis-Thin'; text-align: center; margin-right: 30px; margin-left: 30px; margin-top: 0; color: grey; line-height: 1.2">NanoTank Recommender is a Java application that allows aquarium hobbyists to find compatible tankmate options given a fish and tank size. It uses bloom filters to find similar fish out of a CSV Database of nano-fish. I developed a generic, re-usable REPL and CSV Reader and incorporated them into the project.</p>
             </div>
@@ -127,7 +127,8 @@
             <p style="font-size: 1.4vw; font-family: 'Metropolis-SemiBold'; padding-bottom: 1vw; line-height: 1.5; margin-bottom: 0">Foundation</p>
             <p style="font-size: 1.3vw; font-family: 'Metropolis-Regular'; text-align: left; margin-top: 0; margin-bottom: 0; color: black; line-height: 1.2"> The Java application was built upon the foundation of a generic REPL (Read–eval–print loop) that I developed to be able to handle any command that it is added to its command database. It also heavily relies on a generic CSV reader that I implemented to parse any csv file into a set of objects.</p>
             <p style="font-size: 1.3vw; font-family: 'Metropolis-SemiBold';text-align: left; color: black; line-height: 1.5; margin-bottom: 0">Implementation</p>
-            <p style="font-size: 1.3vw; font-family: 'Metropolis-Regular'; padding-bottom: 1vw;  text-align: left; color: black; line-height: 1.2">I created a CSV file with a list of nano-fish and their corresponding data. I included qualitative information for each fish regarding their habitat of origin, aquarium plant and substrate preferences and water salinity (freshwater or brackish). I also included quantitative information, including the ranges of pH, temperature, and hardness that the fish can tolerate and the minimum tank size that would be suitable for them.</p>
+            <p style="font-size: 1.3vw; font-family: 'Metropolis-Regular'; padding-bottom: 1vw;  text-align: left; color: black; line-height: 1.2">I created a CSV file with a list of
+              <a href="https://www.aquariumsource.com/nano-fish-for-small-tanks/">nano-fish</a> and their corresponding data. I included qualitative information for each fish regarding their habitat of origin, aquarium plant and substrate preferences and water salinity (freshwater or brackish). I also included quantitative information, including the ranges of pH, temperature, and hardness that the fish can tolerate and the minimum tank size that would be suitable for them.</p>
 
             <div style="flex: 1; text-align: center">
               <img style="width: 80%;" src='./static/assets/fish_data.png'/>
@@ -159,12 +160,12 @@
         </div>
 
         <div class='modal-container' id='modal3' >
-          <div style="width: 100%; height: 36vw; background-image: url('texture.png'); background-size: cover; position: relative;">
+          <div style="width: 100%; height: 36vw; background-image: url('./static/assets/texture.png'); background-size: cover; position: relative;">
             <span class="close" data-modal="modal3" style="color: white; position: absolute; right: -0.7vw; top: -0.2vw; width: 3.125vw; height: 3.125vw; cursor:pointer; font-size:3vw;">&times;</span>
           </div>
 
           <div style="max-width: 100%; padding: 0 40px">
-            <p style="font-size: 2vw; font-family: 'Metropolis-SemiBold'; text-align: center; margin-bottom: 0.6944444444444444vw">Texture Classifier <a href='https://github.com/johnnyboustany/Texture-Classifier'><img style="height:2vw; width: auto;"  class='footer-icon' src='github.svg'/></a> </p>
+            <p style="font-size: 2vw; font-family: 'Metropolis-SemiBold'; text-align: center; margin-bottom: 0.6944444444444444vw">Texture Classifier <a href='https://github.com/johnnyboustany/Texture-Classifier'><img style="height:2vw; width: auto;"  class='footer-icon' src='./static/assets/github.svg'/></a> </p>
             <p style="font-size: 1.7vw; font-family: 'Metropolis-Regular'; text-align: center; margin-top: 0; margin-bottom:  0.6944444444444444vw">Spring 2022 • <span style="font-size: 1.7vw; font-family: 'Metropolis-LightItalic'"> Stack: Python (TensorFlow) </span></p>
             <p style="font-size: 1.3vw; font-family: 'Metropolis-Thin'; text-align: center; margin-right: 30px; margin-left: 30px; margin-top: 0; color: grey; line-height: 1.2">Alongside two students, I built two base deep learning models for my Spring 2022 Deep Learning course to classify images based on texture and then fine-tuned the models to investigate how modifications to the architecture, tunable parameters, and amount of data passed in affected the learning and texture classification capabilities of the models.</p>
           </div>
@@ -183,11 +184,11 @@
             <p style="font-size: 1.4vw; font-family: 'Metropolis-SemiBold';line-height: 1.5; margin-bottom: 0">Results</p>
             <p style="font-size: 1.3vw; font-family: 'Metropolis-Regular'; padding-bottom: 1vw; text-align: left; color: black; line-height: 1.2">In order to evaluate the effectiveness of the models, we examined both precision and recall and used them to calculate F1-score (the harmonic mean of the two values). The first ResNet model performed the best and achieved the highest F1-score out of all the models. The second VGG model performed the worst out of all the models. This is consistent with the low accuracy and high loss observed for this model during the training and testing process. The first VGG model was the most successful VGG model, which is also consistent with its relatively high accuracy and low loss.
             </p>
-            <div style="flex: 1; text-align: center"><img style="width: 40%;" src='tabletexture.png'/>
+            <div style="flex: 1; text-align: center"><img style="width: 40%;" src='./static/assets/tabletexture.png'/>
               <p style="text-align: center; margin-top: 5px; color: grey; font-size: 0.97222vw"> above: shows the average accuracy values for the models. </p>
             </div>
             <br>
-            <div style="flex: 1; text-align: center"><img style="width: 70%;" src='graphtexture.png'/>
+            <div style="flex: 1; text-align: center"><img style="width: 70%;" src='./static/assets/graphtexture.png'/>
               <p style="text-align: center; margin-top: 0px; color: grey; font-size: 0.97222vw"> above: comparing classifications of the 47 Textures by all models.</p>
             </div>
           </div>
@@ -197,12 +198,12 @@
           </div>
         </div>
         <div class='modal-container' id='modal4' >
-          <div style="width: 100%; height: 36vw; background-image: url('waveform.png'); background-size: cover; position: relative;">
+          <div style="width: 100%; height: 36vw; background-image: url('./static/assets/waveform.png'); background-size: cover; position: relative;">
             <span class="close" data-modal="modal4" style="color: white; position: absolute; right: -0.7vw; top: -0.2vw; width: 3.125vw; height: 3.125vw; cursor:pointer; font-size:3vw;">&times;</span>
           </div>
 
           <div style="max-width: 100%; padding: 0 40px">
-            <p style="font-size: 2vw; font-family: 'Metropolis-SemiBold'; text-align: center; margin-bottom: 10px">Waveform Generator <a href='https://github.com/johnnyboustany/WaveGenerator'><img style="height:2vw; width: auto" class='footer-icon' src='github.svg'/></a></p>
+            <p style="font-size: 2vw; font-family: 'Metropolis-SemiBold'; text-align: center; margin-bottom: 10px">Waveform Generator <a href='https://github.com/johnnyboustany/WaveGenerator'><img style="height:2vw; width: auto" class='footer-icon' src='./static/assets/github.svg'/></a></p>
             <p style="font-size: 1.7vw; font-family: 'Metropolis-Regular'; text-align: center; margin-top: 0; margin-bottom: 10px">Spring 2022 • <span style="font-size: 1.7vw; font-family: 'Metropolis-LightItalic'"> Stack: Python </span></p>
             <p style="font-size: 1.3vw; font-family: 'Metropolis-Thin'; text-align: center; margin-right: 30px; margin-left: 30px; margin-top: 0; color: grey; line-height: 1.2">I wrote a Python-based app alongside a classmate to allow users to generate waveforms easily and on-demand. Given a frequency, the app can output a signal to the left or right audio channels of your computer. The software is Python-based and has a Tkinter-based GUI and is packaged with pyinstaller as an app that a user can run on both Windows and Mac computers with no Python installation necessary.</p>
 
@@ -237,7 +238,7 @@
       <div style="padding-bottom: 1.3888888888888888vw; margin-left: 0.6944444444444444vw; margin-right: 0.6944444444444444vw;">
         <h2>experience.</h2>
         <div style="padding-bottom: 0.5vw">
-          <img src="beytek.jpg" style="float: right; margin-right: 6.944444444444445vw; width: auto; height:  5.555555555555555vw; box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.15);" />
+          <img src="./static/assets/beytek.jpg" style="float: right; margin-right: 6.944444444444445vw; width: auto; height:  5.555555555555555vw; box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.15);" />
           <p> <span class="role-desc" >Software Engineering Intern </span> <br> <a style="font-size: 1.0416666666666667vw" href="https://www.beytek.co/">Beytek SAL Offshore</a>
             <small style="font-family: 'Metropolis-Light'; font-size: 1.0416666666666667vw"> · July 2022 - September 2022</small>
             <br> <span class="stack" style="font-family: 'Metropolis-ThinItalic'"> Stack: JavaScript, Angular, HTML/CSS</span>
@@ -249,7 +250,7 @@
         </div>
 
         <div style="padding-bottom: 0.5vw">
-          <img src="harris.jpg" style="float: right; margin-right: 6.944444444444445vw; width: auto; height:  5.555555555555555vw; box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.15);" />
+          <img src="./static/assets/harris.jpg" style="float: right; margin-right: 6.944444444444445vw; width: auto; height:  5.555555555555555vw; box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.15);" />
           <p> <span class="role-desc" >Student Researcher at Harris Lab </span> <br> <a style="font-size: 1.0416666666666667vw" href="https://www.brown.edu/">Brown University</a>
             <small style="font-family: 'Metropolis-Light'; font-size: 1.0416666666666667vw"> · Spring 2022</small>
             <br> <span class="stack" style="font-family: 'Metropolis-ThinItalic'">Stack: Python (Tkinter, PyAudio)</span>
@@ -260,7 +261,7 @@
         </div>
 
         <div style="padding-bottom: 0.5vw">
-          <img src="sas.jpg" style="float: right; margin-right: 6.944444444444445vw; width: auto; height:  5.555555555555555vw; box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.15);" />
+          <img src="./static/assets/sas.jpg" style="float: right; margin-right: 6.944444444444445vw; width: auto; height:  5.555555555555555vw; box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.15);" />
           <p> <span class="role-desc" >Computer Engineering Intern </span> <br> <a style="font-size: 1.0416666666666667vw" href="https://www.sascontrollers.com/">S. & A. S. Co. Ltd</a>
             <small style="font-family: 'Metropolis-Light'; font-size: 1.0416666666666667vw">· Summer 2020</small>
             <br> <span class="stack" style="font-family: 'Metropolis-ThinItalic'">Stack: C</span>
@@ -272,7 +273,7 @@
 
 
         <div style="padding-bottom: 0.5vw">
-          <img src="brown.jpg" style="float: right; margin-right: 6.944444444444445vw; width: auto; height:  5.555555555555555vw; box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.15);"  alt=""/>
+          <img src="./static/assets/brown.jpg" style="float: right; margin-right: 6.944444444444445vw; width: auto; height:  5.555555555555555vw; box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.15);"  alt=""/>
           <p> <span class="role-desc" >Engineering Intern at Tripathi Lab </span> <br> <a style="font-size: 1.0416666666666667vw" href="https://www.brown.edu/">Brown University</a>
             <small style="font-family: 'Metropolis-Light'; font-size: 1.0416666666666667vw">· Summer 2020</small>
             <br> <span class="stack" style="font-family: 'Metropolis-ThinItalic'">Stack: C</span>
@@ -330,15 +331,15 @@
       <div class="center" id="contact" style="background: rgba(255, 255, 255, 0.93)">
         <footer>
           <div style="text-align: center; padding-top:  0.6944444444444444vw;">
-            <a href='https://www.linkedin.com/in/johnny-boustany/'><img style="width: auto; height: 2vw" class='footer-icon' src='linkedin.svg'/></a>
+            <a href='https://www.linkedin.com/in/johnny-boustany/'><img style="width: auto; height: 2vw" class='footer-icon' src='./static/assets/linkedin.svg'/></a>
 
             <div class="tooltip">
-              <a href='#0' id="email"><img style="width: auto; height: 2vw" class='footer-icon' src='mail.svg'/>
+              <a href='#0' id="email"><img style="width: auto; height: 2vw" class='footer-icon' src='./static/assets/mail.svg'/>
                 <span class="tooltiptext" id="myTooltip">copy to clipboard.</span>
               </a>
             </div>
 
-            <a href='https://github.com/johnnyboustany'><img style="width: auto; height: 2vw" class='footer-icon' src='github.svg'/></a>
+            <a href='https://github.com/johnnyboustany'><img style="width: auto; height: 2vw" class='footer-icon' src='./static/assets/github.svg'/></a>
           </div>
           <p style="font-size: 0.9722222222222222vw; color: black; text-align: center">&copy; 2022 designed and built by Johnny Boustany</p>
         </footer>
