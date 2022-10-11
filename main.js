@@ -250,7 +250,6 @@ function pause() {
 
 animate();
 
-
 // Sticky
 // Get the navbar
 var navbar = document.getElementById("navbar");
@@ -260,7 +259,7 @@ var sticky = navbar.offsetTop;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function stickyFunction() {
-    if(!isMobile()){
+/*    if(!isMobile()){
         if ( window.pageYOffset > sticky) {
             navbar.classList.add("sticky");
             navbar.classList.add("fade-in");
@@ -268,7 +267,7 @@ function stickyFunction() {
             navbar.classList.remove("sticky");
             navbar.classList.remove("fade-in");
         }
-    }
+    }*/
 }
 
 
@@ -317,21 +316,21 @@ const home = document.getElementById('home-a');
 
 });
 
-
-window.addEventListener('resize',function(){
-
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-
-    if(!isMobile()){
-        johnny.position.z = -25;
-        johnny.position.x = 15;
-    } else {
-        johnny.position.z = -60;
-        johnny.position.x = 14;
-    }
-});
+//
+// window.addEventListener('resize',function(){
+//
+//     camera.aspect = window.innerWidth / window.innerHeight;
+//     camera.updateProjectionMatrix();
+//     renderer.setSize(window.innerWidth, window.innerHeight);
+//
+//     if(!isMobile()){
+//         johnny.position.z = -25;
+//         johnny.position.x = 15;
+//     } else {
+//         johnny.position.z = -60;
+//         johnny.position.x = 14;
+//     }
+// });
 
 const email = document.getElementById('email');
 
