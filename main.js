@@ -225,9 +225,26 @@ moveCamera();
 
 var requestID;
 
+function resizeRendererToDisplaySize(renderer) {
+    const canvas = renderer.domElement;
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
+    const needResize = canvas.width !== width || canvas.height !== height;
+    if (needResize) {
+        renderer.setSize(width, height, false);
+    }
+    return needResize;
+}
+
 
 function animate() {
   requestID = requestAnimationFrame(animate);
+
+    if (resizeRendererToDisplaySize(renderer)) {
+        const canvas = renderer.domElement;
+        camera.aspect = canvas.clientWidth / canvas.clientHeight;
+        camera.updateProjectionMatrix();
+    }
 
     // Animates the water
     water.material.uniforms[ 'time' ].value += 1.0 / 60.0;
@@ -259,7 +276,7 @@ var sticky = navbar.offsetTop;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function stickyFunction() {
-/*    if(!isMobile()){
+    if(!isMobile()){
         if ( window.pageYOffset > sticky) {
             navbar.classList.add("sticky");
             navbar.classList.add("fade-in");
@@ -267,7 +284,7 @@ function stickyFunction() {
             navbar.classList.remove("sticky");
             navbar.classList.remove("fade-in");
         }
-    }*/
+    }
 }
 
 
@@ -316,7 +333,7 @@ const home = document.getElementById('home-a');
 
 });
 
-//
+
 // window.addEventListener('resize',function(){
 //
 //     camera.aspect = window.innerWidth / window.innerHeight;
@@ -331,6 +348,11 @@ const home = document.getElementById('home-a');
 //         johnny.position.x = 14;
 //     }
 // });
+
+
+
+
+
 
 const email = document.getElementById('email');
 
