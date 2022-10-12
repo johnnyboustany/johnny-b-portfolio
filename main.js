@@ -346,7 +346,7 @@ window.addEventListener('resize',function(){
 
     camera.aspect = canvas.clientWidth / canvas.clientHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize(width, height, false);
+    renderer.setSize(width, height);
 
     // if(!isMobile()){
     //     johnny.position.z = -25;
