@@ -225,43 +225,31 @@ moveCamera();
 
 var requestID;
 
-function resizeRendererToDisplaySize(renderer) {
-
-    const canvas = renderer.domElement;
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-    const needResize = canvas.width !== width || canvas.height !== height;
-    if (needResize) {
-        renderer.setSize(width, height, false);
-
-    }
-
-    return needResize;
-}
-
-
-// window.addEventListener('resize',function(){
+// function resizeRendererToDisplaySize(renderer) {
 //
-//     camera.aspect = window.innerWidth / window.innerHeight;
-//     camera.updateProjectionMatrix();
-//     renderer.setSize(window.innerWidth, window.innerHeight);
+//     const canvas = renderer.domElement;
+//     const width = canvas.clientWidth;
+//     const height = canvas.clientHeight;
+//     const needResize = canvas.width !== width || canvas.height !== height;
+//     if (needResize) {
+//         renderer.setSize(width, height, false);
 //
-//     if(!isMobile()){
-//         johnny.position.z = -25;
-//         johnny.position.x = 15;
-//     } else {
-//         johnny.position.z = -60;
-//         johnny.position.x = 14;
 //     }
-// });
+//
+//     return needResize;
+// }
+
+
 function animate() {
   requestID = requestAnimationFrame(animate);
 
-    if (resizeRendererToDisplaySize(renderer)) {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-    }
-    
+    // if (resizeRendererToDisplaySize(renderer)) {
+    //     const canvas = renderer.domElement;
+    //     camera.aspect = canvas.clientWidth / canvas.clientHeight;
+    //     camera.updateProjectionMatrix();
+    // }
+
+
     // Animates the water
     water.material.uniforms[ 'time' ].value += 1.0 / 60.0;
 
@@ -350,7 +338,24 @@ const home = document.getElementById('home-a');
 });
 
 
+window.addEventListener('resize',function(){
 
+    const canvas = renderer.domElement;
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
+
+    camera.aspect = canvas.clientWidth / canvas.clientHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(width, height, false);
+
+    // if(!isMobile()){
+    //     johnny.position.z = -25;
+    //     johnny.position.x = 15;
+    // } else {
+    //     johnny.position.z = -60;
+    //     johnny.position.x = 14;
+    // }
+});
 
 
 
