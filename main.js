@@ -341,10 +341,15 @@ const home = document.getElementById('home-a');
 window.addEventListener('resize',function(){
 
     const canvas = renderer.domElement;
-    const width = canvas.clientWidth;
-    const height = canvas.clientHeight;
+    let width = canvas.clientWidth;
+    let height = canvas.clientHeight;
 
-    camera.aspect = canvas.clientWidth / canvas.clientHeight;
+    if (width < window.innerWidth || height < window.innerHeight){
+        width = window.innerWidth;
+        height = window.innerHeight;
+    }
+
+    camera.aspect = width / height;
     camera.updateProjectionMatrix();
     renderer.setSize(width, height);
 
