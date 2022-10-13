@@ -353,13 +353,13 @@ window.addEventListener('resize',function(){
     camera.updateProjectionMatrix();
     renderer.setSize(width, height);
 
-    // if(!isMobile()){
-    //     johnny.position.z = -25;
-    //     johnny.position.x = 15;
-    // } else {
-    //     johnny.position.z = -60;
-    //     johnny.position.x = 14;
-    // }
+    if(!isMobile()){
+        johnny.position.z = -25;
+        johnny.position.x = 15;
+    } else {
+        johnny.position.z = -60;
+        johnny.position.x = 14;
+    }
 });
 
 
