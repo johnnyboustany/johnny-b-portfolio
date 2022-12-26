@@ -127,9 +127,9 @@ gltfLoader.load('./static/assets/wooden_boat/scene.gltf', (gltfScene) => {
     loadedBoat = gltfScene;
     if(!isMobile()){
         scene.add(gltfScene.scene);
-        gltfScene.scene.position.z = 20;
+        gltfScene.scene.position.z = -30;
         gltfScene.scene.scale.set(0.1, 0.1,0.1, 0.1)
-        gltfScene.scene.position.setX(-40);
+        gltfScene.scene.position.setX(-60);
     }
 });
 
@@ -145,67 +145,28 @@ function moveCamera() {
     const projects_span  = document.getElementById("projects-span");
     const projects = document.getElementById("projects");
 
-    const experience_span  = document.getElementById("experience-span");
-    const experience = document.getElementById("experience");
-
-    const skills_span  = document.getElementById("skills-span");
-    const skills = document.getElementById("skills");
-
-    const contact_span  = document.getElementById("contact-span");
-
     if(!isMobile()){
         if (pageYOffset >= 0 < aboutme.offsetTop - 3*aboutme.clientHeight / 3) {
             home_span.classList.add("bold")
             aboutme_span.classList.remove("bold");
             projects_span.classList.remove("bold");
-            experience_span.classList.remove("bold");
-            skills_span.classList.remove("bold");
-            contact_span.classList.remove("bold");
 
         }
 
-        if (pageYOffset >= aboutme.offsetTop - 3*aboutme.clientHeight / 3 && pageYOffset < projects.offsetTop - 3*projects.clientHeight / 3) {
+        if (pageYOffset >= aboutme.offsetTop - 3*aboutme.clientHeight / 3 ) {
             aboutme_span.classList.add("bold")
             home_span.classList.remove("bold");
             projects_span.classList.remove("bold");
-            experience_span.classList.remove("bold");
-            skills_span.classList.remove("bold");
-            contact_span.classList.remove("bold");
         }
 
-        if (pageYOffset >= projects.offsetTop - 3*projects.clientHeight / 3 && pageYOffset <  experience.offsetTop - experience.clientHeight / 3) {
+
+        if (pageYOffset >= projects.offsetTop - (projects.clientHeight) / 3 && pageYOffset < (projects.offsetTop - (projects.clientHeight) / 3)+projects.clientHeight) {
+            home_span.classList.remove("bold");
+            aboutme_span.classList.remove("bold");
             projects_span.classList.add("bold");
-            home_span.classList.remove("bold");
-            aboutme_span.classList.remove("bold");
-            experience_span.classList.remove("bold");
-            skills_span.classList.remove("bold");
-            contact_span.classList.remove("bold");
         }
 
-        if (pageYOffset >= experience.offsetTop - experience.clientHeight / 3 && pageYOffset < skills.offsetTop - skills.clientHeight / 3) {
-            experience_span.classList.add("bold");
-            home_span.classList.remove("bold");
-            aboutme_span.classList.remove("bold");
-            projects_span.classList.remove("bold");
-            skills_span.classList.remove("bold");
-            contact_span.classList.remove("bold");
-        }
-        if (pageYOffset >= skills.offsetTop - (skills.clientHeight) / 3 && pageYOffset < (skills.offsetTop - (skills.clientHeight) / 3)+skills.clientHeight) {
-            skills_span.classList.add("bold");
-            home_span.classList.remove("bold");
-            aboutme_span.classList.remove("bold");
-            projects_span.classList.remove("bold");
-            experience_span.classList.remove("bold");
-            contact_span.classList.remove("bold");
-        }
-        if (pageYOffset >= (skills.offsetTop - (skills.clientHeight) / 3)+skills.clientHeight/1.5){
-            contact_span.classList.add("bold");
-            home_span.classList.remove("bold");
-            aboutme_span.classList.remove("bold");
-            projects_span.classList.remove("bold");
-            experience_span.classList.remove("bold");
-            skills_span.classList.remove("bold");
-        }
+
     }
 
     const t = document.body.getBoundingClientRect().top;
@@ -326,6 +287,13 @@ closeBtns.forEach(function(btn){
   });
 })
 
+document.addEventListener('click', (e) => {
+    let clickInside = modal.contains(e.target)
+
+    if (!clickInside) {
+        modal.classList.remove('show')
+    }
+})
 // controlling scroll navigation
 const home = document.getElementById('home-a');
   home.addEventListener('click',()=>{
@@ -372,9 +340,9 @@ const email = document.getElementById('email');
 email.addEventListener('click',()=>{
     var tooltip = document.getElementById("myTooltip");
 
-    copy("johnny_boustany@brown.edu");
+    copy("anonymous@gmail.com");
 
-    navigator.clipboard.writeText("johnny_boustany@brown.edu");
+    navigator.clipboard.writeText("anonymous@gmail.com");
     tooltip.innerHTML = "copied email.";
 });
 
