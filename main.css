@@ -3,27 +3,129 @@
   justify-content: space-evenly;
 }
 
-button{
+.hide{
+
+  display: None;
+}
+#button1{
+  background-image: url('./static/assets/typeically-icon.png'); background-size: cover;
   font-family: 'Metropolis-Thin';
-  display: inline-block;
-  background-color: rgba(255, 255, 255, 0.70);
+  background-color:rgba(0,0,139,0.3);
   border-radius: 0.6944444444444444vw;
   border: white;
   color: black;
   text-align: center;
   font-size: 1.1111111111111112vw;
-  padding: 1.3888888888888888vw;
-  width:  9.027777777777779vw;
-  height:  9.3vw;
+  width:  19vw;
+  height:  19vw;
   cursor: pointer;
-  margin: 0.3472222222222222vw;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.15);
 
 }
-button:hover {
-  background-color:rgba(135,206,235, 0.70);
+
+#button2{
+
+  background-image: url('./static/assets/nanofish-icon.png'); background-size: cover;
+  font-family: 'Metropolis-Thin';
+  background-color:rgba(219, 251, 255, 1);
+
+  border-radius: 0.6944444444444444vw;
+  border: white;
+  color: black;
+  text-align: center;
+  font-size: 1.1111111111111112vw;
+  width:  19vw;
+  height:  19vw;
+  cursor: pointer;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.15);
+
+}
+
+#button3{
+
+  background-image: url('./static/assets/texture-icon.png'); background-size: cover;
+  font-family: 'Metropolis-Thin';
+  background-color:rgba(135,206,235, 0.60);
+
+  border-radius: 0.6944444444444444vw;
+  border: white;
+  color: black;
+  text-align: center;
+  font-size: 1.1111111111111112vw;
+  width:  19vw;
+  height:  19vw;
+  cursor: pointer;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.15);
+
+}
+#ul-double-col1 {
+
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+#ul-double-col2 {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+#button4{
+
+  background-image: url('./static/assets/waveform-icon.png');
+  background-size: cover;
+  font-family: 'Metropolis-Thin';
+  background-color:rgba(106, 134, 180, 0.6);
+
+  border-radius: 0.6944444444444444vw;
+  border: white;
+  color: black;
+  text-align: center;
+  font-size: 1.1111111111111112vw;
+  width:  19vw;
+  height:  19vw;
+  cursor: pointer;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.15);
+
+}
+
+#button1:hover span {
+  display: block;
+}
+#button1:hover {
+  background-image: none;
+  background-color:rgba(0,0,139,0.2);
   border: rgba(135,206,235, 0.70);
-  transition: 0.7s;
+  transition: 1s;
+}
+#button2:hover span {
+  display: block;
+}
+#button2:hover {
+  background-image: none;
+  background-color:rgba(219, 251, 255, 0.7);
+  border: rgba(135,206,235, 0.5);
+  transition: 1s;
+}
+
+#button3:hover span {
+  display: block;
+}
+#button3:hover {
+  background-image: none;
+  background-color:rgba(135,206,235, 0.4);
+  border: rgba(135,206,235, 0.70);
+  transition: 1s;
+}
+
+#button4:hover span {
+  display: block;
+}
+#button4:hover {
+  background-image: none;
+  background-color:rgba(106, 134, 180, 0.4);
+  border: rgba(135,206,235, 0.70);
+  transition: 1s;
 }
 
 button:active {
@@ -41,6 +143,8 @@ body {
 
 
  html, body {
+   scroll-behavior: smooth;
+
    margin: 0;
    height: 100%;
  }
@@ -52,14 +156,13 @@ body {
 
 /* Navbar links */
 #navbar a {
-  font-size: 1.15vw;
+  font-size: 1.3vw;
   float: left;
   display: block;
   text-align: center;
   padding: 0.5vw;
   text-decoration: none;
 }
-
 /* Navbar links */
 #navbar a:hover {
   font-family: 'Metropolis-SemiBold';
@@ -75,13 +178,23 @@ body {
   padding: 16px;
 }
 
+.row {
+  display: flex;
+  flex-grow: 1;
+}
+
+.column{
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
   position:fixed;
   left:0;
   top:0;
   bottom:0;
-  width:9.027777777777779vw;
+  width:11vw;
   height:100%;
   padding-top: 40px;
   padding-left: 20px;
@@ -98,7 +211,9 @@ body {
   color: white;
   text-shadow: 1px 1px 2px black;
 }
-
+.sticky span {
+  font-size: 1.6vw;
+}
 .fade-in {
   -webkit-animation: fadein 2s;/* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -282,8 +397,6 @@ h2 {
 }
 
 
-
-
 header {
   border-radius: 0.6944444444444444vw;
   border: rgba(255, 255, 255, 0.93);
@@ -295,8 +408,6 @@ header {
   margin-bottom: var(--spacing);
 }
 
-
-
 section {
   border-radius: 0.6944444444444444vw;
   border: rgba(255, 255, 255, 0.93);
@@ -306,7 +417,7 @@ section {
   background: var(--dark-bg);
   font-size: 1.25rem;
   line-height: 1.5;
-  margin-bottom: var(--spacing);
+  margin-bottom: 10vw;
 }
 
 .left {
