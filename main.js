@@ -301,15 +301,24 @@ window.addEventListener("scroll", stickyFunction);
 
 // modal popup for projects
 
+
+let open = false;
+
 const openBtns = document.querySelectorAll('.open');
+
 
 openBtns.forEach(function(btn){
   const modal = btn.getAttribute('data-modal');
   btn.addEventListener('click',()=>{
-      const body = document.querySelector("body");
-      body.style.overflowY = "hidden";
-      document.getElementById(modal).classList.add('show');
-      pause();
+
+      if(!open){
+          open = true;
+          const body = document.querySelector("body");
+          body.style.overflowY = "hidden";
+          document.getElementById(modal).classList.add('show');
+          pause();
+
+      }
   });
 })
 const closeBtns = document.querySelectorAll('.close');
@@ -327,7 +336,7 @@ closeBtns.forEach(function(btn){
             ) {
                     const body = document.querySelector("body");
                     body.style.overflowY = "auto";
-
+                open = false;
                     document.getElementById(modal).classList.remove('show');
                 pause();
                 animate();
