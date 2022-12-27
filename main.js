@@ -164,7 +164,7 @@ function moveCamera() {
 
         }
 
-        if (pageYOffset >= aboutme.offsetTop - 3*aboutme.clientHeight / 3 && pageYOffset < projects.offsetTop - 3*projects.clientHeight / 3) {
+        if (pageYOffset >= aboutme.offsetTop - 3*aboutme.clientHeight / 3 && pageYOffset < 2*(projects.offsetTop - 3*projects.clientHeight / 3)) {
             aboutme_span.classList.add("bold")
             home_span.classList.remove("bold");
             projects_span.classList.remove("bold");
@@ -173,7 +173,7 @@ function moveCamera() {
             contact_span.classList.remove("bold");
         }
 
-        if (pageYOffset >= projects.offsetTop - 3*projects.clientHeight / 3 && pageYOffset <  experience.offsetTop - experience.clientHeight / 3) {
+        if (pageYOffset >= (projects.offsetTop - 3*projects.clientHeight / 3)*2 && pageYOffset <  experience.offsetTop - experience.clientHeight / 3) {
             projects_span.classList.add("bold");
             home_span.classList.remove("bold");
             aboutme_span.classList.remove("bold");
