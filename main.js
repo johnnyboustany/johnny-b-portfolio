@@ -161,7 +161,6 @@ function moveCamera() {
             experience_span.classList.remove("bold");
             skills_span.classList.remove("bold");
             contact_span.classList.remove("bold");
-
         }
 
         if (pageYOffset >= aboutme.offsetTop - 3*aboutme.clientHeight / 3 && pageYOffset < 2*(projects.offsetTop - 3*projects.clientHeight / 3)) {
@@ -301,6 +300,7 @@ window.addEventListener("scroll", stickyFunction);
     }
 
 // modal popup for projects
+
 const openBtns = document.querySelectorAll('.open');
 
 openBtns.forEach(function(btn){
@@ -312,19 +312,110 @@ openBtns.forEach(function(btn){
       pause();
   });
 })
-
 const closeBtns = document.querySelectorAll('.close');
 
 closeBtns.forEach(function(btn){
-  const modal = btn.getAttribute('data-modal');
-  btn.addEventListener('click',()=>{
-      const body = document.querySelector("body");
-      body.style.overflowY = "auto";
 
-      document.getElementById(modal).classList.remove('show');
-      animate();
-  });
+    const modal = btn.getAttribute('data-modal');
+
+    document.addEventListener(
+        "click",
+        function(event) {
+            // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
+            if (
+                 event.target.matches(".close") || !event.target.closest("#projects")
+            ) {
+                    const body = document.querySelector("body");
+                    body.style.overflowY = "auto";
+
+                    document.getElementById(modal).classList.remove('show');
+                pause();
+                animate();
+            }
+        },
+        false
+    )
+
+
+
 })
+
+
+
+/*
+
+
+document.addEventListener(
+    "click",
+    function(event) {
+        // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
+        if (
+            event.target.matches(".close1")
+        ) {
+            const body = document.querySelector("body");
+            body.style.overflowY = "auto";
+
+            document.getElementById("modal1").classList.remove('show');
+            animate();
+        }
+    },
+    false
+)
+
+document.addEventListener(
+    "click",
+    function(event) {
+        // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
+        if (
+            event.target.matches(".close2") ||
+            !event.target.closest("#modal2")
+        ) {
+            const body = document.querySelector("body");
+            body.style.overflowY = "auto";
+
+            document.getElementById("modal2").classList.remove('show');
+            animate();
+        }
+    },
+    false
+)
+
+document.addEventListener(
+    "click",
+    function(event) {
+        // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
+        if (
+            event.target.matches(".close3") ||
+            !event.target.closest("#modal3")
+        ) {
+            const body = document.querySelector("body");
+            body.style.overflowY = "auto";
+
+            document.getElementById("modal3").classList.remove('show');
+            animate();
+        }
+    },
+    false
+)
+
+document.addEventListener(
+    "click",
+    function(event) {
+        // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
+        if (
+            event.target.matches(".close4") ||
+            !event.target.closest("#modal4")
+        ) {
+            const body = document.querySelector("body");
+            body.style.overflowY = "auto";
+
+            document.getElementById("modal4").classList.remove('show');
+            animate();
+        }
+    },
+    false
+)
+*/
 
 // controlling scroll navigation
 const home = document.getElementById('home-a');
