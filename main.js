@@ -257,7 +257,6 @@ function animate() {
     //     camera.updateProjectionMatrix();
     // }
 
-            johnny.position.y = 27;
 
     // Animates the water
     water.material.uniforms[ 'time' ].value += 1.0 / 60.0;
