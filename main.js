@@ -256,29 +256,8 @@ function animate() {
     //     camera.aspect = canvas.clientWidth / canvas.clientHeight;
     //     camera.updateProjectionMatrix();
     // }
-    if (resizeRendererToDisplaySize(renderer)) {
-        const canvas = renderer.domElement;
-        camera.aspect = canvas.clientWidth / canvas.clientHeight;
-        camera.updateProjectionMatrix();
-
-        if(isMobile()){
-            johnny.position.z = -60;
-
-            johnny.position.x = 0;
 
             johnny.position.y = 27;
-
-        } else if(isTablet()){
-            johnny.position.z = -60;
-            johnny.position.x = 15;
-            johnny.position.y = 27;
-
-        } else {
-            johnny.position.z = -25;
-            johnny.position.x = 15;
-        }
-        johnny.rotation.x = 20;
-    }
 
     // Animates the water
     water.material.uniforms[ 'time' ].value += 1.0 / 60.0;
@@ -291,8 +270,6 @@ function animate() {
         loadedBoat.scene.position.y = Math.sin( time ) - 0.5;
         loadedBoat.scene.rotation.z = Math.sin( time )/20;
     }
-
-
 
     renderer.render(scene, camera);
 }
@@ -476,18 +453,6 @@ const home = document.getElementById('home-a');
 });
 
 
-function resizeRendererToDisplaySize(renderer) {
-    const canvas = renderer.domElement;
-    const pixelRatio = window.devicePixelRatio;
-    const width  = canvas.clientWidth  * pixelRatio | 0;
-    const height = canvas.clientHeight * pixelRatio | 0;
-    const needResize = canvas.width !== width || canvas.height !== height;
-    if (needResize) {
-        renderer.setSize(width, height, false);
-    }
-    return needResize;
-}
-/*
 window.addEventListener('resize',function(){
 
     const canvas = renderer.domElement;
@@ -522,7 +487,7 @@ window.addEventListener('resize',function(){
     johnny.rotation.x = 20;
 
 });
-*/
+
 
 
 
