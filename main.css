@@ -536,6 +536,19 @@ hide_space{
 
 @media screen and (max-width: 700px) {
 
+  #button1{
+    border-radius: 1.5vw;
+  }
+  #button2{
+    border-radius: 1.5vw;
+  }
+  #button3{
+    border-radius: 1.5vw;
+  }
+  #button4{
+    border-radius: 1.5vw;
+  }
+
   #close1{
     color: white; position: absolute; right: -0.7vw; top: -0.2vw; width: 6vw; height: 6vw; cursor:pointer; font-size:6vw;
   }
