@@ -322,6 +322,19 @@ body {
   color: black;
 }
 
+#close1{
+  color: white; position: absolute; right: -0.7vw; top: -0.2vw; width: 3.125vw; height: 3.125vw; cursor:pointer; font-size:3vw;
+}
+#close2{
+  color: black; position: absolute; right: -0.7vw; top: -0.2vw; width: 3.125vw; height: 3.125vw; cursor:pointer; font-size:3vw;
+}
+
+#close3{
+  color: black; position: absolute; right: -0.7vw; top: -0.2vw; width: 3.125vw; height: 3.125vw; cursor:pointer; font-size:3vw;
+}
+#close4{
+  color: white; position: absolute; right: -0.7vw; top: -0.2vw; width: 3.125vw; height: 3.125vw; cursor:pointer; font-size:3vw;
+}
 .modal-container.show{
   box-shadow: 0 0 0 100vmax rgba(0, 0, 0,0.7);
   pointer-events: auto;
@@ -391,10 +404,7 @@ li::marker {
   font-size: 1.4vw;
 
 }
-h2 {
-  font-family: 'Metropolis-Regular';
-  font-size: 2.0833333333333335vw;
-}
+
 
 
 header {
@@ -421,7 +431,7 @@ section {
 }
 
 .left {
-  grid-column: span 6 / 10;
+  grid-column: span 6 /  10;
 }
 .right {
 grid-column: span 6 / 10
@@ -437,30 +447,35 @@ grid-column: span 6 / 10
 .skills {
   grid-column: span 4 / 9;
 }
-@media screen and (max-width: 700px) {
 
 
-  section{
-    grid-column: span 7 / 9;
+.header-name{
+  font-size:  3.5vw
+}
 
-  }
-  .center{
-    grid-column: span 8 / 10;
-  }
-  .skills{
-    grid-column: span 7 / 9;
+.header-desc{
+  font-size: 1.8vw;
+}
 
-  }
-  .left{
-    grid-column: span 7 / 9;
-
-  }
+h2 {
+  font-family: 'Metropolis-Regular';
+  font-size: 2.0833333333333335vw;
 }
 
 p{
   font-size: 1.35vw ;
 
 }
+
+
+
+
+.company-text{
+
+  font-size: 1.0416666666666667vw
+}
+
+
 
 ul li {
   right: 0.2vh;
@@ -477,6 +492,208 @@ li:before {
   vertical-align:middle;
   line-height:1.3888888888888888vw;
 }
+hide_space{
+
+
+}
+
+
+.img-1{
+
+  float: right; margin-left: 2vw; width: auto; height:  5.3vw;
+}
+
+
+.img-2{
+  float: right; margin-left: 2vw; width: auto; height:  5.1vw; box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.15); border-radius: 5px
+}
+
+.img-3{
+  float: right; margin-left: 3vw; width: auto; padding-right: 0.8vw; height:  5.3vw;
+}
+
+.img-4{
+  float: right; margin-left: 2vw; width: auto; height:  4.7vw;
+}
+
+
+
+.skill-bullet{
+  font-size: 1.2vw;
+}
+
+
+.contact-desc{
+  font-size: 0.9722222222222222vw; color: black; text-align: center;
+}
+
+.footer-icon{
+  width: auto; height: 2vw
+}
+
+@media screen and (max-width: 700px) {
+
+  #close1{
+    color: white; position: absolute; right: -0.7vw; top: -0.2vw; width: 6vw; height: 6vw; cursor:pointer; font-size:6vw;
+  }
+  #close2{
+    color: black; position: absolute; right: -0.7vw; top: -0.2vw; width: 6vw; height: 6vw; cursor:pointer; font-size:6vw;
+  }
+
+  #close3{
+    color: black; position: absolute; right: -0.7vw; top: -0.2vw; width: 6vw; height: 6vw; cursor:pointer; font-size:6vw;
+  }
+  #close4{
+    color: white; position: absolute; right: -0.7vw; top: -0.2vw; width: 6vw; height: 6vw; cursor:pointer; font-size:6vw;
+  }
+  header {
+
+    margin-bottom: 60vw;
+  }
+  .contact-desc{
+    font-size: 2vw;
+  }
+  .skill-bullet{
+    font-size: 2vw;
+  }
+  .footer-icon{
+    width: auto; height: 4vw
+
+  }
+
+  .img-1{
+    width: auto; height:  7.3vw;
+
+  }
+  .img-2{
+    width: auto; height:  7vw;
+  }
+
+  .img-3{
+  width: auto; height:  7.3vw;
+  }
+
+  .img-4{
+    width: auto; height:  5.5vw;
+  }
+
+
+  hide_space{
+    display: none;
+  }
+
+  li:before {
+    font-size:4vw;
+  }
+
+  li{
+
+    font-size: 2vw;
+
+  }
+  .stack{
+    font-size:2vw
+
+  }
+
+  li{
+    line-height: 1.4em;
+
+  }
+  #experience{
+    line-height: 0.6em;
+  }
+  .role-desc{
+    font-size: 3vw;
+
+  }
+  .company-text {
+    font-size:2vw
+  }
+  #button1{
+    height: 30vw;
+
+    width: 30vw;
+  }
+  #button2{
+    height: 30vw;
+
+    width: 30vw;
+  }
+  #button3{
+    height: 30vw;
+
+    width: 30vw;
+  }
+  #button4{
+    height: 30vw;
+
+    width: 30vw;
+  }
+  header{
+    padding: 20px;
+    line-height: 0.5em;
+  }
+  section{
+    padding: 20px;
+
+  }
+
+  #home-span{
+    display: none;
+  }
+
+  #navbar a {
+    font-size: 3vw;
+    padding: 0.5vw;
+  }
+
+  .header-name{
+    font-size:  6vw;
+  }
+
+  .header-desc{
+    font-size: 3.5vw;
+    margin-top: 4px;
+
+  }
+
+  p {
+    font-size: 3.7vw;
+  }
+
+  h2 {
+    font-size: 5vw;
+  }
+
+
+  main{
+    padding: 50px 0px 0px 60px;
+
+  }
+  header{
+
+
+    grid-column: span 10 / 11;
+  }
+  section{
+    grid-column: span 10 / 11;
+
+  }
+  .center{
+    grid-column: span 10 / 11;
+  }
+  .skills{
+    grid-column: span 10 / 11;
+
+  }
+  .left{
+    grid-column: span 10 / 11;
+
+  }
+}
+
+
 
 .tooltip {
   display: inline-block;

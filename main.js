@@ -115,7 +115,9 @@ if(!isMobile()){
     johnny.position.x = 15;
 } else {
     johnny.position.z = -60;
-    johnny.position.x = 14;
+    johnny.position.x = 0;
+    johnny.position.y = 29;
+
 }
 
 johnny.rotation.x = 20;
@@ -254,7 +256,7 @@ function animate() {
 
     const time = performance.now() * 0.001;
 
-    johnny.position.y = Math.sin( time ) + 0.8;
+    //johnny.position.y = Math.sin( time ) + 0.8;
 
     if( !isMobile() && loadedBoat){
         loadedBoat.scene.position.y = Math.sin( time ) - 0.5;
