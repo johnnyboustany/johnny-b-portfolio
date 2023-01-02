@@ -112,9 +112,7 @@ scene.add(johnny);
 
  if(isMobile()){
     johnny.position.z = -60;
-
     johnny.position.x = 0;
-
     johnny.position.y = 27;
 
 } else if(isTablet()){
@@ -251,21 +249,18 @@ var requestID;
 function animate() {
   requestID = requestAnimationFrame(animate);
 
-    // if (resizeRendererToDisplaySize(renderer)) {
-    //     const canvas = renderer.domElement;
-    //     camera.aspect = canvas.clientWidth / canvas.clientHeight;
-    //     camera.updateProjectionMatrix();
-    // }
-
 
     // Animates the water
     water.material.uniforms[ 'time' ].value += 1.0 / 60.0;
 
     const time = performance.now() * 0.001;
 
-    //johnny.position.y = Math.sin( time ) + 0.8;
+    if(!isMobile() && !isTablet() ){
+        johnny.position.y = Math.sin( time ) + 0.8;
 
-    if( !isMobile() && loadedBoat){
+    }
+
+    if( !isMobile() && !isTablet() && loadedBoat){
         loadedBoat.scene.position.y = Math.sin( time ) - 0.5;
         loadedBoat.scene.rotation.z = Math.sin( time )/20;
     }
@@ -309,7 +304,7 @@ function isTablet(){
 }
 
 
-if(!isMobile()){
+if(!isMobile() && !isTablet()){
 window.addEventListener("scroll", stickyFunction);
     }
 
@@ -458,32 +453,34 @@ window.addEventListener('resize',function(){
     let width = canvas.clientWidth;
     let height = canvas.clientHeight;
 
-    if (width < window.innerWidth || height < window.innerHeight){
+    if (width !== window.innerWidth || height !== window.innerHeight){
         width = window.innerWidth;
         height = window.innerHeight;
+        
+        if(isMobile()){
+            johnny.position.z = -60;
+
+            johnny.position.x = 0;
+
+            johnny.position.y = 27;
+
+        } else if(isTablet()){
+            johnny.position.z = -60;
+            johnny.position.x = 15;
+            johnny.position.y = 27;
+
+        } else {
+            johnny.position.z = -25;
+            johnny.position.x = 15;
+        }
+        johnny.rotation.x = 20;
+
     }
 
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
     renderer.setSize(width, height);
 
-    if(isMobile()){
-        johnny.position.z = -60;
-
-        johnny.position.x = 0;
-
-        johnny.position.y = 27;
-
-    } else if(isTablet()){
-        johnny.position.z = -60;
-        johnny.position.x = 15;
-        johnny.position.y = 27;
-
-    } else {
-        johnny.position.z = -25;
-        johnny.position.x = 15;
-    }
-    johnny.rotation.x = 20;
 
 });
 
