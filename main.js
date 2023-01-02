@@ -483,6 +483,8 @@ window.addEventListener('resize',function(){
         johnny.position.z = -25;
         johnny.position.x = 15;
     }
+    johnny.rotation.x = 20;
+
 });
 
 
