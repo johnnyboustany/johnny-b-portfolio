@@ -115,7 +115,10 @@ if(!isMobile()){
     johnny.position.x = 15;
 } else {
     johnny.position.z = -60;
-    johnny.position.x = 0;
+    const canvas = renderer.domElement;
+    const width = canvas.clientWidth;
+    johnny.position.x = width/800;
+
     johnny.position.y = 29;
 
 }
