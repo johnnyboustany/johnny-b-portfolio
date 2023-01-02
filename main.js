@@ -376,7 +376,7 @@ const home = document.getElementById('home-a');
 });
 
 
-window.addEventListener('resize',function(){
+window.onresize = function(event) {
 
     const canvas = renderer.domElement;
     let width = canvas.clientWidth;
@@ -409,11 +409,7 @@ window.addEventListener('resize',function(){
     }
     johnny.rotation.x = 20;
 
-});
-
-
-
-
+};
 
 
 const email = document.getElementById('email');
