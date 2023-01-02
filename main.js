@@ -364,7 +364,7 @@ window.addEventListener('resize',function(){
     let width = canvas.clientWidth;
     let height = canvas.clientHeight;
 
-    if (width !== window.innerWidth || height !== window.innerHeight) {
+    if (width < window.innerWidth || height < window.innerHeight){
         width = window.innerWidth;
         height = window.innerHeight;
     }
@@ -373,25 +373,18 @@ window.addEventListener('resize',function(){
     camera.updateProjectionMatrix();
     renderer.setSize(width, height);
 
-    if(isMobile()){
+    if(!isMobile()){
+        johnny.position.z = -25;
+        johnny.position.x = 15;
+    } else {
         johnny.position.z = -60;
-
+        // const canvas = renderer.domElement;
+        // const width = canvas.clientWidth;
         johnny.position.x = 0;
 
         johnny.position.y = 27;
 
-    } else if(isTablet()){
-        johnny.position.z = -60;
-        johnny.position.x = 15;
-        johnny.position.y = 27;
-
-    } else {
-        johnny.position.z = -25;
-        johnny.position.x = 15;
     }
-    johnny.rotation.x = 20;
-
-
 });
 
 
