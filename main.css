@@ -530,6 +530,9 @@ hide_space{
 .footer-icon{
   width: auto; height: 2vw
 }
+.hide_space {
+  padding-bottom: 0vw;
+}
 
 @media screen and (max-width: 700px) {
 
@@ -548,13 +551,14 @@ hide_space{
   }
   header {
 
+
     margin-bottom: 60vw;
   }
   .contact-desc{
     font-size: 2vw;
   }
   .skill-bullet{
-    font-size: 2vw;
+    font-size: 2.7vw;
   }
   .footer-icon{
     width: auto; height: 4vw
@@ -578,8 +582,8 @@ hide_space{
   }
 
 
-  hide_space{
-    display: none;
+  .hide_space {
+  padding-bottom: 1.5vw
   }
 
   li:before {
@@ -635,7 +639,11 @@ hide_space{
     line-height: 0.5em;
   }
   section{
-    padding: 20px;
+    padding-top: 12px;
+    padding-bottom: 8px;
+
+    padding-right: 20px;
+    padding-left: 20px;
 
   }
 
@@ -673,21 +681,29 @@ hide_space{
   }
   header{
 
+    border-radius:2vw;
 
     grid-column: span 10 / 11;
   }
   section{
     grid-column: span 10 / 11;
+    border-radius: 2vw;
 
   }
   .center{
+    border-radius: 2vw;
+
     grid-column: span 10 / 11;
   }
   .skills{
+    border-radius: 2vw;
+
     grid-column: span 10 / 11;
 
   }
   .left{
+    border-radius: 2vw;
+
     grid-column: span 10 / 11;
 
   }
