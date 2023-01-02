@@ -231,20 +231,6 @@ moveCamera();
 
 var requestID;
 
-// function resizeRendererToDisplaySize(renderer) {
-//
-//     const canvas = renderer.domElement;
-//     const width = canvas.clientWidth;
-//     const height = canvas.clientHeight;
-//     const needResize = canvas.width !== width || canvas.height !== height;
-//     if (needResize) {
-//         renderer.setSize(width, height, false);
-//
-//     }
-//
-//     return needResize;
-// }
-
 
 function animate() {
   requestID = requestAnimationFrame(animate);
@@ -304,7 +290,7 @@ function isTablet(){
 }
 
 
-if(!isMobile() && !isTablet()){
+if(!isMobile() ){
 window.addEventListener("scroll", stickyFunction);
     }
 
@@ -360,81 +346,6 @@ closeBtns.forEach(function(btn){
 
 
 
-/*
-
-
-document.addEventListener(
-    "click",
-    function(event) {
-        // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
-        if (
-            event.target.matches(".close1")
-        ) {
-            const body = document.querySelector("body");
-            body.style.overflowY = "auto";
-
-            document.getElementById("modal1").classList.remove('show');
-            animate();
-        }
-    },
-    false
-)
-
-document.addEventListener(
-    "click",
-    function(event) {
-        // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
-        if (
-            event.target.matches(".close2") ||
-            !event.target.closest("#modal2")
-        ) {
-            const body = document.querySelector("body");
-            body.style.overflowY = "auto";
-
-            document.getElementById("modal2").classList.remove('show');
-            animate();
-        }
-    },
-    false
-)
-
-document.addEventListener(
-    "click",
-    function(event) {
-        // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
-        if (
-            event.target.matches(".close3") ||
-            !event.target.closest("#modal3")
-        ) {
-            const body = document.querySelector("body");
-            body.style.overflowY = "auto";
-
-            document.getElementById("modal3").classList.remove('show');
-            animate();
-        }
-    },
-    false
-)
-
-document.addEventListener(
-    "click",
-    function(event) {
-        // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
-        if (
-            event.target.matches(".close4") ||
-            !event.target.closest("#modal4")
-        ) {
-            const body = document.querySelector("body");
-            body.style.overflowY = "auto";
-
-            document.getElementById("modal4").classList.remove('show');
-            animate();
-        }
-    },
-    false
-)
-*/
-
 // controlling scroll navigation
 const home = document.getElementById('home-a');
   home.addEventListener('click',()=>{
@@ -453,33 +364,32 @@ window.addEventListener('resize',function(){
     let width = canvas.clientWidth;
     let height = canvas.clientHeight;
 
-    if (width !== window.innerWidth || height !== window.innerHeight){
+    if (width !== window.innerWidth || height !== window.innerHeight) {
         width = window.innerWidth;
         height = window.innerHeight;
-        
-        if(isMobile()){
-            johnny.position.z = -60;
-
-            johnny.position.x = 0;
-
-            johnny.position.y = 27;
-
-        } else if(isTablet()){
-            johnny.position.z = -60;
-            johnny.position.x = 15;
-            johnny.position.y = 27;
-
-        } else {
-            johnny.position.z = -25;
-            johnny.position.x = 15;
-        }
-        johnny.rotation.x = 20;
-
     }
 
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
     renderer.setSize(width, height);
+
+    if(isMobile()){
+        johnny.position.z = -60;
+
+        johnny.position.x = 0;
+
+        johnny.position.y = 27;
+
+    } else if(isTablet()){
+        johnny.position.z = -60;
+        johnny.position.x = 15;
+        johnny.position.y = 27;
+
+    } else {
+        johnny.position.z = -25;
+        johnny.position.x = 15;
+    }
+    johnny.rotation.x = 20;
 
 
 });
