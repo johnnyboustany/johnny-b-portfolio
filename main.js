@@ -110,18 +110,22 @@ const johnny = new THREE.Mesh(new THREE.BoxGeometry(10, 10, 10), new THREE.MeshB
 
 scene.add(johnny);
 
-if(!isMobile()){
-    johnny.position.z = -25;
-    johnny.position.x = 15;
-} else {
+ if(isMobile()){
     johnny.position.z = -60;
-   // const canvas = renderer.domElement;
-   // const width = canvas.clientWidth;
+
     johnny.position.x = 0;
 
     johnny.position.y = 27;
 
-}
+} else if(isTablet()){
+     johnny.position.z = -60;
+     johnny.position.x = 15;
+     johnny.position.y = 27;
+
+} else {
+     johnny.position.z = -25;
+     johnny.position.x = 15;
+ }
 
 johnny.rotation.x = 20;
 
@@ -297,8 +301,13 @@ function stickyFunction() {
 
 
 function isMobile(){
-    return window.innerWidth <= 1000;
+    return window.innerWidth <= 750;
 }
+
+function isTablet(){
+    return window.innerWidth > 750 & window.innerWidth <= 1000;
+}
+
 
 if(!isMobile()){
 window.addEventListener("scroll", stickyFunction);
@@ -458,17 +467,21 @@ window.addEventListener('resize',function(){
     camera.updateProjectionMatrix();
     renderer.setSize(width, height);
 
-    if(!isMobile()){
-        johnny.position.z = -25;
-        johnny.position.x = 15;
-    } else {
+    if(isMobile()){
         johnny.position.z = -60;
-        // const canvas = renderer.domElement;
-        // const width = canvas.clientWidth;
+
         johnny.position.x = 0;
 
         johnny.position.y = 27;
 
+    } else if(isTablet()){
+        johnny.position.z = -60;
+        johnny.position.x = 15;
+        johnny.position.y = 27;
+
+    } else {
+        johnny.position.z = -25;
+        johnny.position.x = 15;
     }
 });
 
