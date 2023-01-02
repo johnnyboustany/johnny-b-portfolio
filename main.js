@@ -454,36 +454,40 @@ const home = document.getElementById('home-a');
 
 window.addEventListener('resize',function(){
 
-    const canvas = renderer.domElement;
-    let width = canvas.clientWidth;
-    let height = canvas.clientHeight;
+    if(!isMobile() && !isTablet()){
+        const canvas = renderer.domElement;
+        let width = canvas.clientWidth;
+        let height = canvas.clientHeight;
 
-    if (width < window.innerWidth || height < window.innerHeight){
-        width = window.innerWidth;
-        height = window.innerHeight;
-    }
+        if (width < window.innerWidth || height < window.innerHeight){
+            width = window.innerWidth;
+            height = window.innerHeight;
+        }
 
-    camera.aspect = width / height;
-    camera.updateProjectionMatrix();
-    renderer.setSize(width, height);
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+        renderer.setSize(width, height);
 
-    if(isMobile()){
-        johnny.position.z = -60;
+        //  if(isMobile()){
+        //      johnny.position.z = -60;
+//
+        //     johnny.position.x = 0;
 
-        johnny.position.x = 0;
+        //      johnny.position.y = 27;
 
-        johnny.position.y = 27;
+        //  } else if(isTablet()){
+        //    johnny.position.z = -60;
+        //     johnny.position.x = 15;
+        //    johnny.position.y = 27;
 
-    } else if(isTablet()){
-        johnny.position.z = -60;
-        johnny.position.x = 15;
-        johnny.position.y = 27;
-
-    } else {
+        // } else {
         johnny.position.z = -25;
         johnny.position.x = 15;
+        //  }
+        johnny.rotation.x = 20;
+
     }
-    johnny.rotation.x = 20;
+
 
 });
 
