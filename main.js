@@ -112,7 +112,9 @@ scene.add(johnny);
 
  if(isMobile()){
     johnny.position.z = -60;
+
     johnny.position.x = 0;
+
     johnny.position.y = 27;
 
 } else if(isTablet()){
@@ -231,9 +233,29 @@ moveCamera();
 
 var requestID;
 
+// function resizeRendererToDisplaySize(renderer) {
+//
+//     const canvas = renderer.domElement;
+//     const width = canvas.clientWidth;
+//     const height = canvas.clientHeight;
+//     const needResize = canvas.width !== width || canvas.height !== height;
+//     if (needResize) {
+//         renderer.setSize(width, height, false);
+//
+//     }
+//
+//     return needResize;
+// }
+
 
 function animate() {
   requestID = requestAnimationFrame(animate);
+
+    // if (resizeRendererToDisplaySize(renderer)) {
+    //     const canvas = renderer.domElement;
+    //     camera.aspect = canvas.clientWidth / canvas.clientHeight;
+    //     camera.updateProjectionMatrix();
+    // }
 
 
     // Animates the water
@@ -241,12 +263,9 @@ function animate() {
 
     const time = performance.now() * 0.001;
 
-    if(!isMobile() && !isTablet() ){
-        johnny.position.y = Math.sin( time ) + 0.8;
+    //johnny.position.y = Math.sin( time ) + 0.8;
 
-    }
-
-    if( !isMobile() && !isTablet() && loadedBoat){
+    if( !isMobile() && loadedBoat){
         loadedBoat.scene.position.y = Math.sin( time ) - 0.5;
         loadedBoat.scene.rotation.z = Math.sin( time )/20;
     }
@@ -290,7 +309,7 @@ function isTablet(){
 }
 
 
-if(!isMobile() ){
+if(!isMobile()){
 window.addEventListener("scroll", stickyFunction);
     }
 
@@ -345,7 +364,6 @@ closeBtns.forEach(function(btn){
 })
 
 
-
 // controlling scroll navigation
 const home = document.getElementById('home-a');
   home.addEventListener('click',()=>{
@@ -373,18 +391,24 @@ window.addEventListener('resize',function(){
     camera.updateProjectionMatrix();
     renderer.setSize(width, height);
 
-    if(!isMobile()){
-        johnny.position.z = -25;
-        johnny.position.x = 15;
-    } else {
+    if(isMobile()){
         johnny.position.z = -60;
-        // const canvas = renderer.domElement;
-        // const width = canvas.clientWidth;
+
         johnny.position.x = 0;
 
         johnny.position.y = 27;
 
+    } else if(isTablet()){
+        johnny.position.z = -60;
+        johnny.position.x = 15;
+        johnny.position.y = 27;
+
+    } else {
+        johnny.position.z = -25;
+        johnny.position.x = 15;
     }
+    johnny.rotation.x = 20;
+
 });
 
 
