@@ -119,7 +119,7 @@ if(!isMobile()){
    // const width = canvas.clientWidth;
     johnny.position.x = 0;
 
-    johnny.position.y = 29;
+    johnny.position.y = 27;
 
 }
 
@@ -467,7 +467,7 @@ window.addEventListener('resize',function(){
         // const width = canvas.clientWidth;
         johnny.position.x = 0;
 
-        johnny.position.y = 29;
+        johnny.position.y = 27;
 
     }
 });
