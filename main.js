@@ -366,10 +366,10 @@ window.addEventListener('resize',function(){
     let width = canvas.clientWidth;
     let height = canvas.scrollHeight;
 
-    if (width < window.innerWidth || height < window.innerHeight){
-        width = window.innerWidth;
-        height = window.innerHeight;
-    }
+ //   if (width < window.innerWidth || height < window.innerHeight){
+ //       width = window.innerWidth;
+  //      height = window.innerHeight;
+ //   }
 
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
