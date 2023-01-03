@@ -566,7 +566,8 @@ hide_space{
   font-size: 1.3vw;}
 
 .img-caption{
-font-size: 0.97222vw
+font-size: 0.97222vw;
+  margin-right: 18vw; margin-left: 18vw;
 }
 
 .project-img-large{
@@ -582,8 +583,8 @@ font-size: 0.97222vw
 .project-img-xtra-small{
   width: 40%;
 }
-@media screen and (max-width: 450px) {
 
+@media screen and (max-width: 450px) {
 
   .project-img-large{
 
@@ -601,7 +602,9 @@ font-size: 0.97222vw
     width: 55%;
   }
   .img-caption{
-    font-size: 2.2vw
+    font-size: 2.2vw;
+    margin-right: 0; margin-left: 0;
+
   }
   .project-name{
     font-size: 4vw;
