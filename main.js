@@ -17,11 +17,11 @@ const renderer = new THREE.WebGLRenderer({
 
 const canvas = renderer.domElement;
 
-const element = document.getElementById("mainBody");
 
-let width = canvas.clientWidth;
-let height = element.scrollHeight;
-
+//let width = canvas.clientWidth;
+//let height = canvas.scrollHeight;
+let width = window.innerWidth;
+let height = window.innerHeight;
 if (width < window.innerWidth || height < window.innerHeight){
     width = window.innerWidth;
     height = window.innerHeight;
