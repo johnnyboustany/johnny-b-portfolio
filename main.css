@@ -500,12 +500,12 @@ hide_space{
 
 .img-1{
 
-  float: right; margin-left: 2vw; width: auto; height:  5.3vw;
+  float: right; margin-left: 2.4vw; width: auto; height:  5.1vw;
 }
 
 
 .img-2{
-  float: right; margin-left: 2vw; width: auto; height:  5.1vw; box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.15); border-radius: 5px
+  float: right; margin-left: 2vw; width: auto; height:  5vw; box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.15); border-radius: 5px
 }
 
 .img-3{
@@ -513,7 +513,7 @@ hide_space{
 }
 
 .img-4{
-  float: right; margin-left: 2vw; width: auto; height:  4.7vw;
+  float: right; margin-left: 2vw; width: auto; height:  4.3vw;
 }
 
 
@@ -570,7 +570,7 @@ font-size: 0.97222vw
 }
 
 .project-img-large{
-  width: 70%;
+  width: 50%;
 }
 .project-img-medium{
   width: 60%;
