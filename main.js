@@ -256,9 +256,12 @@ function animate() {
 
     const time = performance.now() * 0.001;
 
-    //johnny.position.y = Math.sin( time ) + 0.8;
+    if(!isMobile() && !isTablet()){
+        johnny.position.y = Math.sin( time ) + 0.8;
 
-    if( !isMobile() && loadedBoat){
+    }
+
+    if( !isMobile() && !isTablet() && loadedBoat){
         loadedBoat.scene.position.y = Math.sin( time ) - 0.5;
         loadedBoat.scene.rotation.z = Math.sin( time )/20;
     }
@@ -294,11 +297,11 @@ function stickyFunction() {
 
 
 function isMobile(){
-    return window.innerWidth <= 750;
+    return window.innerWidth <= 525;
 }
 
 function isTablet(){
-    return window.innerWidth > 750 & window.innerWidth <= 1000;
+    return window.innerWidth > 525 & window.innerWidth <= 1000;
 }
 
 
