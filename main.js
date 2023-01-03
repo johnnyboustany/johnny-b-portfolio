@@ -17,11 +17,9 @@ const renderer = new THREE.WebGLRenderer({
 
 const canvas = renderer.domElement;
 
+let width = canvas.clientWidth;
+let height = canvas.scrollHeight;
 
-//let width = canvas.clientWidth;
-//let height = canvas.scrollHeight;
-let width = window.innerWidth;
-let height = window.innerHeight;
 if (width < window.innerWidth || height < window.innerHeight){
     width = window.innerWidth;
     height = window.innerHeight;
@@ -36,6 +34,8 @@ renderer.setSize(width, height);
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 
 camera.position.set( -3, 10, 30 );
+
+
 
 // Setting up natural environment
 
@@ -368,6 +368,20 @@ const home = document.getElementById('home-a');
 
 });
 
+
+
+const canvas1 = renderer.domElement;
+let width1 = canvas1.clientWidth;
+let height1 = canvas1.scrollHeight;
+
+if (width1 < window.innerWidth || height1 < window.innerHeight){
+    width1 = window.innerWidth;
+    height1 = window.innerHeight;
+}
+
+camera.aspect = width / height;
+camera.updateProjectionMatrix();
+renderer.setSize(width, height);
 
 
 window.addEventListener('resize',function(){
