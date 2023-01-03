@@ -17,11 +17,11 @@ const renderer = new THREE.WebGLRenderer({
 
 const canvas = renderer.domElement;
 
-let camera = new THREE.PerspectiveCamera(75, canvas.clientWidth / canvas.scrollHeight, 0.1, 2000);
+let camera = new THREE.PerspectiveCamera(75, canvas.clientWidth / document.body.scrollHeight, 0.1, 2000);
 
 camera.updateProjectionMatrix();
 renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(canvas.clientWidth, canvas.scrollHeight);
+renderer.setSize(canvas.clientWidth, document.body.scrollHeight);
 
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 
@@ -364,12 +364,12 @@ window.addEventListener('resize',function(){
 
     const canvas = renderer.domElement;
     let width = canvas.clientWidth;
-    let height = canvas.scrollHeight;
+    let height = document.body.scrollHeight;
 
- //   if (width < window.innerWidth || height < window.innerHeight){
- //       width = window.innerWidth;
-  //      height = window.innerHeight;
- //   }
+    if (width < window.innerWidth || height < document.body.scrollHeight){
+        width = window.innerWidth;
+        height = window.innerHeight;
+    }
 
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
