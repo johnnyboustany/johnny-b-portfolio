@@ -10,25 +10,18 @@ const scene = new THREE.Scene();
 //let innerWidth = window.innerWidth;
 //let innerHeight = window.innerHeight;
 
-let camera = new THREE.PerspectiveCamera(75, innerWidth / innerHeight, 0.1, 2000);
 
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#bg'),
 });
 
 const canvas = renderer.domElement;
-let width = canvas.clientWidth;
-let height = canvas.scrollHeight;
 
-if (width < window.innerWidth || height < window.innerHeight){
-    width = window.innerWidth;
-    height = window.innerHeight;
-}
+let camera = new THREE.PerspectiveCamera(75, canvas.clientWidth / canvas.scrollHeight, 0.1, 2000);
 
-camera.aspect = width / height;
 camera.updateProjectionMatrix();
 renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(width, height);
+renderer.setSize(canvas.clientWidth, canvas.scrollHeight);
 
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 
@@ -122,7 +115,7 @@ const johnny = new THREE.Mesh(new THREE.BoxGeometry(10, 10, 10), new THREE.MeshB
 
 scene.add(johnny);
 
- if(isMobile()){
+if(isMobile()){
     johnny.position.z = -60;
 
     johnny.position.x = 0;
@@ -130,15 +123,14 @@ scene.add(johnny);
     johnny.position.y = 27;
 
 } else if(isTablet()){
-     johnny.position.z = -60;
-     johnny.position.x = 15;
-     johnny.position.y = 27;
+    johnny.position.z = -60;
+    johnny.position.x = 15;
+    johnny.position.y = 27;
 
 } else {
-     johnny.position.z = -25;
-     johnny.position.x = 15;
- }
-
+    johnny.position.z = -25;
+    johnny.position.x = 15;
+}
 johnny.rotation.x = 20;
 
 // Boat
@@ -244,20 +236,6 @@ moveCamera();
 // Animation Loop
 
 var requestID;
-
-// function resizeRendererToDisplaySize(renderer) {
-//
-//     const canvas = renderer.domElement;
-//     const width = canvas.clientWidth;
-//     const height = canvas.clientHeight;
-//     const needResize = canvas.width !== width || canvas.height !== height;
-//     if (needResize) {
-//         renderer.setSize(width, height, false);
-//
-//     }
-//
-//     return needResize;
-// }
 
 
 function animate() {
