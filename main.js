@@ -20,6 +20,11 @@ const canvas = renderer.domElement;
 let width = canvas.clientWidth;
 let height = canvas.scrollHeight;
 
+if (width < window.innerWidth || height < window.innerHeight){
+    width = window.innerWidth;
+    height = window.innerHeight;
+}
+
 camera.aspect = width / height;
 camera.updateProjectionMatrix();
 renderer.setPixelRatio(window.devicePixelRatio);
