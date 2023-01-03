@@ -19,9 +19,13 @@ const canvas = renderer.domElement;
 
 const element = document.getElementById("mainBody");
 
-let width = element.scrollWidth;
+let width = canvas.clientWidth;
 let height = element.scrollHeight;
 
+if (width < window.innerWidth || height < window.innerHeight){
+    width = window.innerWidth;
+    height = window.innerHeight;
+}
 
 let camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 2000);
 
@@ -367,11 +371,10 @@ const home = document.getElementById('home-a');
 
 
 window.addEventListener('resize',function(){
-    const element = document.getElementById("mainBody");
 
     const canvas = renderer.domElement;
-    let width = element.scrollWidth;
-    let height = element.scrollHeight;
+    let width = canvas.clientWidth;
+    let height = canvas.scrollHeight;
 
     if (width < window.innerWidth || height < window.innerHeight){
         width = window.innerWidth;
