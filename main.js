@@ -18,12 +18,7 @@ const renderer = new THREE.WebGLRenderer({
 
 const canvas = renderer.domElement;
 let width = canvas.clientWidth;
-let height = canvas.clientHeight;
-
-if (width < window.innerWidth || height < window.innerHeight){
-    width = window.innerWidth;
-    height = window.innerHeight;
-}
+let height = canvas.scrollHeight;
 
 camera.aspect = width / height;
 camera.updateProjectionMatrix();
@@ -386,7 +381,7 @@ window.addEventListener('resize',function(){
 
     const canvas = renderer.domElement;
     let width = canvas.clientWidth;
-    let height = canvas.clientHeight;
+    let height = canvas.scrollHeight;
 
     if (width < window.innerWidth || height < window.innerHeight){
         width = window.innerWidth;
