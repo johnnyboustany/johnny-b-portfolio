@@ -7,8 +7,8 @@ import { GLTFLoader } from 'https://unpkg.com/three@0.127/examples/jsm/loaders/G
 
 const scene = new THREE.Scene();
 
-let innerWidth = window.innerWidth;
-let innerHeight = window.innerHeight;
+//let innerWidth = window.innerWidth;
+//let innerHeight = window.innerHeight;
 
 let camera = new THREE.PerspectiveCamera(75, innerWidth / innerHeight, 0.1, 2000);
 
@@ -16,8 +16,20 @@ const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#bg'),
 });
 
+const canvas = renderer.domElement;
+let width = canvas.clientWidth;
+let height = canvas.clientHeight;
+
+if (width < window.innerWidth || height < window.innerHeight){
+    width = window.innerWidth;
+    height = window.innerHeight;
+}
+
+camera.aspect = width / height;
+camera.updateProjectionMatrix();
 renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(innerWidth, innerHeight);
+renderer.setSize(width, height);
+
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 
 camera.position.set( -3, 10, 30 );
@@ -251,13 +263,6 @@ var requestID;
 function animate() {
   requestID = requestAnimationFrame(animate);
 
-    // if (resizeRendererToDisplaySize(renderer)) {
-    //     const canvas = renderer.domElement;
-    //     camera.aspect = canvas.clientWidth / canvas.clientHeight;
-    //     camera.updateProjectionMatrix();
-    // }
-
-
     // Animates the water
     water.material.uniforms[ 'time' ].value += 1.0 / 60.0;
 
@@ -376,7 +381,8 @@ const home = document.getElementById('home-a');
 });
 
 
-window.onresize = function(event) {
+
+window.addEventListener('resize',function(){
 
     const canvas = renderer.domElement;
     let width = canvas.clientWidth;
@@ -409,7 +415,7 @@ window.onresize = function(event) {
     }
     johnny.rotation.x = 20;
 
-};
+});
 
 
 const email = document.getElementById('email');
