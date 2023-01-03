@@ -534,7 +534,104 @@ hide_space{
   padding-bottom: 0vw;
 }
 
+
+.project-name{
+  font-size: 2vw;
+
+}
+
+.project-date{
+  font-size: 1.7vw;
+
+}
+
+.project-stack{
+  font-size: 1.7vw;
+
+}
+.project-abstract{
+
+  font-size: 1.3vw;
+}
+
+
+.project-background-img{
+  height: 36vw;
+}
+
+.project-sub-header{
+  font-size: 1.4vw;
+}
+.project-desc{
+  font-size: 1.3vw;}
+
+.img-caption{
+font-size: 0.97222vw
+}
+
+.project-img-large{
+  width: 70%;
+}
+.project-img-medium{
+  width: 60%;
+}
+.project-img-xtra-large{
+   width: 80%;
+ }
+
+.project-img-xtra-small{
+  width: 40%;
+}
 @media screen and (max-width: 450px) {
+
+
+  .project-img-large{
+
+    width: 80%;
+  }
+
+  .project-img-medium{
+    width: 70%;
+  }
+  .project-img-xtra-large{
+    width: 95%;
+  }
+
+  .project-img-xtra-small{
+    width: 55%;
+  }
+  .img-caption{
+    font-size: 2.1vw
+  }
+  .project-name{
+    font-size: 4vw;
+
+  }
+
+  .project-date{
+    font-size: 3.5vw;
+
+  }
+
+  .project-stack{
+    font-size: 3.5vw;
+
+  }
+  .project-abstract{
+
+    font-size: 2.6vw;
+  }
+
+
+  .project-sub-header{
+    font-size: 2.5vw;
+  }
+  .project-desc{
+    font-size: 2.3vw;}
+
+  .project-background-img{
+    height: 43vw;
+  }
 
   #button1{
     border-radius: 1.5vw;
